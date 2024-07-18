@@ -12,7 +12,7 @@
     <arg name="z" default="0" />
 
     <!-- put world file as argument-->
-    <!--<arg name="world_file" default = "$(find cobot_sim)/worlds/pick_place_scene.world" />-->
+    <arg name="world_file" default = "$(find lrwr_environment)/worlds/test_environment.world" />
 
     <!-- Launch Gezabo world in paused-->
     <include file = "$(find gazebo_ros)/launch/empty_world.launch" >
@@ -20,7 +20,7 @@
         <arg name="debug" value="false"/>
         <arg name="gui" value="true"/>
         <arg name="paused" value="true" />
-        <!-- <arg name="world_name" value="$(arg world_file)"/> -->
+        <arg name="world_name" value="$(arg world_file)"/>
     </include>   
 
     <!-- Spawn the robot using the package gazebo_ros-->
